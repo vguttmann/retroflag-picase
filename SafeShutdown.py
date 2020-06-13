@@ -4,8 +4,8 @@ import os
 from signal import pause
 import subprocess
 
-powerPin = 3 
-resetPin = 2 
+powerPin = 18 
+resetPin = 15 
 ledPin = 14 
 powerenPin = 4 
 hold = 1
