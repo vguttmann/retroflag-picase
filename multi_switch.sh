@@ -282,8 +282,8 @@ function help--NESPI+() {
     echo "Install raspi-gpio with: sudo apt install raspi-gpio"
     echo
     echo "Default Settings:"
-    echo "    ResetSwitch GPIO 2 (I2C, SDA), input, set pullup resistor!"
-    echo "    PowerSwitch GPIO 3 (I2C, SCL), input, set pullup resistor!"
+    echo "    ResetSwitch GPIO 15 (RXD), input, set pullup resistor!"
+    echo "    PowerSwitch GPIO 18 (PWM0), input, set pullup resistor!"
     echo "    PowerOnControl GPIO 4 (BCM 4), output, high, power on control!"
     echo "    LEDiodeControl GPIO 14 (BCM 14,TxD ), output, high, low (flash LED)"
     echo
@@ -306,8 +306,8 @@ function help--NESPI+() {
 function NESPiPlus() {
 
     #Set GPIOs
-    [[ -z $1 || $1 == "-1" ]] && GPIO_resetswitch=2 || GPIO_resetswitch=$1
-    [[ -z $2 || $2 == "-1" ]] && GPIO_powerswitch=3 || GPIO_powerswitch=$2
+    [[ -z $1 || $1 == "-1" ]] && GPIO_resetswitch=15 || GPIO_resetswitch=$1
+    [[ -z $2 || $2 == "-1" ]] && GPIO_powerswitch=18 || GPIO_powerswitch=$2
     [[ -z $3 || $3 == "-1" ]] && GPIO_poweronctrl=4 || GPIO_poweronctrl=$3
     [[ -z $4 || $4 == "-1" ]] && GPIO_lediodectrl=14 || GPIO_lediodectrl=$4
 
